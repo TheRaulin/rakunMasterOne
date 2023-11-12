@@ -3,6 +3,6 @@
       {{ __('Dashboard') }}
     </x-sidebar-link>
     <x-sidebar-link :href="route('customer')" :active="request()->is('customer*')">
-      {{ __('Customer') }}
+      {{ __('Customers') }}
     </x-sidebar-link>
 </div>
