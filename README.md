@@ -6,3 +6,6 @@
 4) instalar las dependencias npm
 5) crear la base de datos en xampp ( rakunmaster )
 6) Ejecutar la migracion ( php artisan migrate )
+
+
+1) Clases y modelos = "PascalCase"
