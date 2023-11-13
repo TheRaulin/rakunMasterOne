@@ -27,12 +27,12 @@
 
     <div class="h-screen w-8.45/10 bg-second-50">
         <!-- Page Header -->
-        <div class="h-1/10 bg-second-50">
+        <div class="h-1/10 flex items-center">
             @include('layouts.header')
         </div>
 
         <!-- Page Content -->
-        <div class="h-9/10 ">
+        <div class="h-8.85/10 w-9.92/10 bg-gray-200 rounded-xl">
             <main>
                 {{ $slot }}
             </main>

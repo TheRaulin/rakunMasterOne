@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::view('/customer', 'customers.index')->name('customer');
+Route::view('/customers', 'customers.index')->name('customer');
 
 
 require __DIR__.'/auth.php';

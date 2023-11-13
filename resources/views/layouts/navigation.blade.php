@@ -16,7 +16,7 @@
             <x-option-menu icon="bx bxs-cabinet" :href="route('dashboard')" :active="request()->is('dasoar*')">
                 {{ __('Inventory') }}
             </x-option-menu> 
-            <x-option-menu icon="bx bxs-user" :href="route('customer')" :active="request()->is('customer*')">
+            <x-option-menu icon="bx bxs-user" :href="route('customer')" :active="request()->is('customers*')">
                 {{ __('Customers') }}
             </x-option-menu> 
             <x-option-menu icon="bx bxs-truck" :href="route('dashboard')" :active="request()->is('dashord*')">

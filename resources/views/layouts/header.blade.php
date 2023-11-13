@@ -1,1 +1,1 @@
-<h1>header</h1>
+<h1 class="text-3xl mx-4 capitalize font-bold text-white">{{ __(request()->route()->uri()) }}</h1>
