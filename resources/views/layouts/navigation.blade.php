@@ -34,8 +34,11 @@
 
             <div class="w-full border-b-2 border-white"></div>
 
-            <x-option-menu icon="bx bx-log-out" :href="route('dashboard')" :active="request()->is('dasboard*')">
-                {{ __('Log out') }}
-            </x-option-menu>    
+            <form class="h-0.8/10 w-full flex justify-center items-center" method="POST" action="{{ route('logout') }}">
+                @csrf
+                <x-option-menu class="h-full" icon="bx bx-log-out" :href="route('logout')" :active="request()->is('dasboard*')" onclick="event.preventDefault(); this.closest('form').submit();">
+                    {{ __('Log out') }}
+                </x-option-menu> 
+            </form>   
     </div>
 </aside>

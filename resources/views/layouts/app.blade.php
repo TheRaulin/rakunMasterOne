@@ -32,13 +32,10 @@
         </div>
 
         <!-- Page Content -->
-        <div class="h-8.85/10 w-9.92/10 bg-gray-200 rounded-xl">
-            <main>
+            <main class="h-8.85/10 w-9.92/10 rounded-xl overflow-hidden flex flex-col gap-y-0.1/10">
                 {{ $slot }}
             </main>
-        </div>
     </div>
-    <script src="{{ asset('assets/app-x.js') }}"></script>
 </body>
 
 </html>
