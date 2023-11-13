@@ -8,4 +8,4 @@
 6) Ejecutar la migracion ( php artisan migrate )
 
 
-1) Clases y modelos = "PascalCase"
+1) Clases y modelos = "PascalCase" - Modelos en singular
