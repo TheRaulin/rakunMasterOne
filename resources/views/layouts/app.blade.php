@@ -12,19 +12,22 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="flex flex-row h-screen w-screen">
+<body class="flex flex-row h-screen w-screen bg-second-50">
     <!-- Page Navigation Menu -->
     <div class="h-screen w-1.55/10 flex justify-center items-center">
         @include('layouts.navigation')
     </div>
 
-    <div class="h-screen w-8.45/10 bg-red-700 dark:bg-red-900">
+    <div class="h-screen w-8.45/10 bg-second-50">
         <!-- Page Header -->
-        <div class="h-1/10 dark:bg-pink-900">
+        <div class="h-1/10 bg-second-50">
             @include('layouts.header')
         </div>
 
@@ -35,6 +38,7 @@
             </main>
         </div>
     </div>
+    <script src="{{ asset('assets/app-x.js') }}"></script>
 </body>
 
 </html>

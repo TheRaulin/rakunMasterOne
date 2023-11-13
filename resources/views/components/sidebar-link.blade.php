@@ -2,10 +2,19 @@
 
 @php
 $classes = ($active ?? false)
-            ? 'bg-red-700'
-            : 'bg-blue-700';          
+            ? 'h-0.8/10 w-full bg-red-700 rounded-xl'
+            : 'h-0.8/10 w-full bg-blue-700 rounded-xl'; 
+            
+$iconClass = ($active ?? false)
+            ? ''
+            : ''; 
+     
+ $textClass = ($active ?? false)
+            ? ''
+            : ''; 
+       
 @endphp
 
 <a {{ $attributes->merge(['class' => $classes]) }}>
-    {{ $slot }}
+    {{ $slot}}
 </a>

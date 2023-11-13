@@ -17,6 +17,7 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             spacing: {
+                '0.05/10': '0.5%',
                 '0.7/10': '7%',
                 '0.8/10': '8%',
                 '1/10': '10%',
@@ -27,6 +28,20 @@ export default {
                 '9.7/10': '97%',
                 '9/10': '90%',
                 
+            },
+            colors: {
+                primary: {
+                    50: '#111B21',
+                },
+                second: {
+                    50: '#222E35'
+                },
+                three: {
+                    50: '#2A3942'
+                },
+                text: {
+                    50:'#AEBAC1'
+                }
             },
         },
     },

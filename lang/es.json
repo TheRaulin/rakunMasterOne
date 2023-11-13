@@ -143,5 +143,11 @@
     "You're logged in!": "¡Usted está conectado!",
     "Your email address is unverified.": "Su dirección de correo electrónico no está verificada.",
 
-    "Customers": "Clientes"
+    "Customers": "Clientes",
+    "Sales": "Ventas",
+    "Inventory": "Inventario",
+    "Suppliers": "Proveedores",
+    "support": "Soporte",
+    "Settings": "Ajustes",
+    "Log out": "Salir"
 }
