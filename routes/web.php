@@ -25,7 +25,11 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::view('/customers', 'customers.index')->name('customer');
-
+Route::view('/customers', 'customers.index')->name('customers');
+Route::post('/customers', function(){
+    $name = request('name');
+    $email = request('email');
+    $telefono = request('telefono');
+});
 
 require __DIR__.'/auth.php';

@@ -10,13 +10,13 @@
             <x-option-menu icon="bx bxs-dashboard" :href="route('dashboard')" :active="request()->is('dashboard*')" class="mt-4">
                 {{ __('Dashboard') }}
             </x-option-menu> 
-            <x-option-menu icon="bx bxs-wallet" :href="route('customer')" :active="request()->is('csto*')">
+            <x-option-menu icon="bx bxs-wallet" :href="route('customers')" :active="request()->is('csto*')">
                 {{ __('Sales') }}
             </x-option-menu> 
             <x-option-menu icon="bx bxs-cabinet" :href="route('dashboard')" :active="request()->is('dasoar*')">
                 {{ __('Inventory') }}
             </x-option-menu> 
-            <x-option-menu icon="bx bxs-user" :href="route('customer')" :active="request()->is('customers*')">
+            <x-option-menu icon="bx bxs-user" :href="route('customers')" :active="request()->is('customers*')">
                 {{ __('Customers') }}
             </x-option-menu> 
             <x-option-menu icon="bx bxs-truck" :href="route('dashboard')" :active="request()->is('dashord*')">
@@ -28,7 +28,7 @@
             <x-option-menu icon="bx bxs-message-detail" :href="route('dashboard')" :active="request()->is('dashbard*')">
                 {{ __('support') }}
             </x-option-menu> 
-            <x-option-menu icon="bx bxs-cog" :href="route('customer')" :active="request()->is('custoer*')">
+            <x-option-menu icon="bx bxs-cog" :href="route('customers')" :active="request()->is('custoer*')">
                 {{ __('Settings') }}
             </x-option-menu> 
 
