@@ -51,7 +51,6 @@ x-data="{
         <div class="absolute inset-0 bg-gray-500 dark:bg-gray-900 opacity-75"></div>
     </div> 
     
-    
         {{ $slot }}
     
 </div>

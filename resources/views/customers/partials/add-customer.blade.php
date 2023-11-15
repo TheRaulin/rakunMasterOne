@@ -3,7 +3,7 @@
         <div class="py-4 bg-three-50">
             <p class="text-xl text-bold text-gray-100 text-center ">Agregar usuario</p>
         </div>
-        <form method="POST" action="" class="w-full p-5 flex flex-col gap-y-6">
+        <form method="POST" action="{{ route('customers.store') }}" class="w-full p-5 flex flex-col gap-y-6">
             @csrf
             <x-input-form placeholder="Nombre" name="name"/>
             <x-input-form placeholder="Email" name="email"/>

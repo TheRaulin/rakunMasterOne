@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Customer;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,17 +21,17 @@ Route::view('/', 'welcome')->name('welcome');
 Route::middleware('auth')->group(function () {
     Route::view('/dashboard', 'dashboard')->name('dashboard');
 
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profil', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 
-Route::view('/customers', 'customers.index')->name('customers');
-Route::post('/customers', function(){
-    $name = request('name');
-    $email = request('email');
-    $telefono = request('telefono');
-});
+Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
+Route::post('/customers', [CustomerController::class, 'store'])->name('customers.store');
+Route::get('/customers/{customer}/edit', [CustomerController::class, 'edit'])->name('customers.edit');
+Route::put('/customers/{customer}', [CustomerController::class, 'update'])->name('customers.update');
+
+
 
 require __DIR__.'/auth.php';

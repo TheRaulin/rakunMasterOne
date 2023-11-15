@@ -4,7 +4,7 @@
         <button class="bg-blue-600 h-3/5 w-1/10 mx-5 rounded-xl text-white" x-data="" x-on:click.prevent="$dispatch('open-modal', 'add-customer')" type="submit">Agregar cliente</button>
     </div>
     <div class="flex-1 w-full rounded-xl bg-text-50">
-        <table class="w-1/3 border border-collapse">
+        <table class="w-2/3 border border-collapse">
             <thead>
                 <tr>
                     <th class="w-1/5 border border-gray-500">ID</th>
@@ -14,7 +14,20 @@
                     <th class="w-1/5 border border-gray-500">Acciones</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                @foreach($customers as $customer)
+                <tr>
+                    <td class="w-1/5 border border-gray-500">{{ $customer->id}}</td>
+                    <td class="w-1/5 border border-gray-500">{{ $customer->name }}</td>
+                    <td class="w-1/5 border border-gray-500">{{ $customer->email }}</td>
+                    <td class="w-1/5 border border-gray-500">{{ $customer->telefono }}</td>
+                    <td>
+                        <a class="bg-blue-600" href="{{ route('customers.edit', $customer) }}">Edit</a>
+                        
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
         </table>
     <div>
 

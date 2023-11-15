@@ -12,7 +12,9 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        return view('customers.index', [
+            'customers' => Customer::all()
+        ]);
     }
 
     /**
@@ -28,7 +30,20 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'min:3', 'max:255'],
+            'email' => 'required',
+            'telefono' => 'required'
+        ]);
+
+
+        Customer::create([
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'telefono' => $request->get('telefono')
+        ]);
+    
+        return redirect()->back();
     }
 
     /**
@@ -44,7 +59,10 @@ class CustomerController extends Controller
      */
     public function edit(Customer $customer)
     {
-        //
+        return view('customers.partials.edit-customer', [
+            'customer' => $customer,
+            'customers' => Customer::all()
+        ]);
     }
 
     /**
@@ -52,7 +70,7 @@ class CustomerController extends Controller
      */
     public function update(Request $request, Customer $customer)
     {
-        //
+        return "hola";
     }
 
     /**
