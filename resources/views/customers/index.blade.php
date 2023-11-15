@@ -23,7 +23,13 @@
                     <td class="w-1/5 border border-gray-500">{{ $customer->telefono }}</td>
                     <td>
                         <a class="bg-blue-600" href="{{ route('customers.edit', $customer) }}">Edit</a>
-                        
+                        <form class="inline" method="POST" action="{{ route('customers.destroy', $customer) }}">
+                            @csrf @method('DELETE')
+                            <a class="bg-red-600" href="{{ route('customers.edit', $customer) }}" 
+                               onclick="event.preventDefault();
+                               this.closest('form').submit();" 
+                             >Borrar</a>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
