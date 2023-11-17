@@ -39,6 +39,6 @@
                 <x-option-menu class="h-full" icon="bx bx-log-out" :href="route('logout')" :active="request()->is('dasboard*')" onclick="event.preventDefault(); this.closest('form').submit();">
                     {{ __('Log out') }}
                 </x-option-menu> 
-            </form>   
+            </form>  
     </div>
 </aside>
