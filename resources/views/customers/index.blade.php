@@ -4,9 +4,6 @@
         <button class="bg-blue-600 h-3/5 w-1/10 mx-5 rounded-xl text-white" x-data="" x-on:click.prevent="$dispatch('open-modal', 'add-customer')" type="submit">Agregar cliente</button>
     </div>
     <div class="flex-1 w-full rounded-xl bg-white">
-        
-    
-        @include('customers.partials.add-customer')
     <div>
-
+        @include('customers.partials.add-customer')
 </x-app-layout>
