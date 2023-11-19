@@ -2,7 +2,7 @@
     <div class="h-0.8/10 flex flex-row justify-center items-center">
         <h1 class="text-white mb-4">Rakun</h1>
         <span class="text-gray-400 mb-4">Master</span></div>
-    <div class="bg-blue-300 h-1.2/10 rounded-xl bg-three-50 flex flex-col justify-center items-center">
+    <div class="h-1.2/10 rounded-xl bg-three-50 flex flex-col justify-center items-center">
         <p class="text-lg text-white">Federico Posada</p>
         <span class="text-sm text-white">Administrador</span>
     </div>
@@ -39,6 +39,6 @@
                 <x-option-menu class="h-full" icon="bx bx-log-out" :href="route('logout')" :active="request()->is('dasboard*')" onclick="event.preventDefault(); this.closest('form').submit();">
                     {{ __('Log out') }}
                 </x-option-menu> 
-            </form>   
+            </form>  
     </div>
 </aside>
