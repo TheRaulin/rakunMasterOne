@@ -4,6 +4,38 @@
         <button class="bg-blue-600 h-3/5 w-1/10 mx-5 rounded-xl text-white" x-data="" x-on:click.prevent="$dispatch('open-modal', 'add-customer')" type="submit">Agregar cliente</button>
     </div>
     <div class="flex-1 w-full rounded-xl bg-white">
+        <table class="w-2/3 border border-collapse">
+            <thead>
+                <tr>
+                    <th class="w-1/5 border border-gray-500">ID</th>
+                    <th class="w-1/5 border border-gray-500">Nombre</th>
+                    <th class="w-1/5 border border-gray-500">Email</th>
+                    <th class="w-1/5 border border-gray-500">Telefono</th>
+                    <th class="w-1/5 border border-gray-500">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($customers as $customer)
+                <tr>
+                    <td class="w-1/5 border border-gray-500">{{ $customer->id}}</td>
+                    <td class="w-1/5 border border-gray-500">{{ $customer->name }}</td>
+                    <td class="w-1/5 border border-gray-500">{{ $customer->email }}</td>
+                    <td class="w-1/5 border border-gray-500">{{ $customer->telefono }}</td>
+                    <td>
+                        <a class="bg-blue-600" href="{{ route('customers.edit', $customer) }}">Edit</a>
+                        <form class="inline" method="POST" action="{{ route('customers.destroy', $customer) }}">
+                            @csrf @method('DELETE')
+                            <a class="bg-red-600" href="{{ route('customers.edit', $customer) }}" 
+                               onclick="event.preventDefault();
+                               this.closest('form').submit();" 
+                             >Borrar</a>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table> 
+
     <div>
         @include('customers.partials.add-customer')
 </x-app-layout>
