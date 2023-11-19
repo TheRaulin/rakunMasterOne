@@ -1,3 +1,7 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" app-theme="dark">
 
@@ -18,32 +22,9 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-
-<body class="flex flex-row h-screen w-screen bg-second-50">
-    <!-- Page Navigation Menu -->
-    <div class="h-screen w-1.55/10 flex justify-center items-center">
-        @include('layouts.navigation')
-    </div>
-
-    <div class="h-screen w-8.45/10 bg-second-50">
-        <!-- Page Header -->
-        <div class="h-1/10 flex items-center">
-            @include('layouts.header')
-        </div>
-
-        <!-- Page Content -->
-            <main class="h-8.85/10 w-9.92/10 relative rounded-xl overflow-hidden flex flex-col gap-y-0.1/10">
-                {{ $slot }}
-            </main>
-    </div>
-
-
-  
- 
-   
-    
-
-
+<body>
+@include('partials.navigationLandingP')
 </body>
-
 </html>
+
+ 

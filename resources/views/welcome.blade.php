@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
-</head>
-<body>
-@include('partials.navigationLandingP')
+
 
 <h1>inicio</h1>  //se quita luego
+@extends('partials.navigationLandingP')
 
-</body>
-</html>
+

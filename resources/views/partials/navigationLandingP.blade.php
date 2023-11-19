@@ -1,3 +1,7 @@
+
+
+
+
 <header>
       <nav class=" wrapper h-20  flex bg-green-400">
         <h1 class="h-12 text-white">Rakun<span class="h-8 text-slate-700">Master</span></h1>
@@ -15,8 +19,8 @@
            <li><a href=" {{ route ('contact') }}">Contacto</a></li>
            
           </ul>
-         <!--<button class="absolute flex-col inset-x-0 top-24 p-12 bg-slate-700
-          w-[90%] mx-auto rounded-md max-h-max text-center grid gap-6bg-slate-700 ">Comenzar</button>  --> 
+         <button class="absolute flex-col inset-x-0 top-24 p-12 bg-slate-700
+          w-[90%] mx-auto rounded-md max-h-max text-center grid gap-6bg-slate-700 ">Comenzar</button> 
         </div>   
 
 
