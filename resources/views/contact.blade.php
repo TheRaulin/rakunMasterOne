@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <title>Contact</title>
 </head>
 <body>
+<h1>Contact</h1>
 @include('partials.navigationLandingP')
-
-<h1>inicio</h1>  //se quita luego
-
+    
 </body>
 </html>

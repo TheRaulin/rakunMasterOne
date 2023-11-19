@@ -18,6 +18,10 @@ use App\Models\Customer;
 
 Route::view('/', 'welcome')->name('welcome');
 
+//Route::view('/', 'welcome')->name('Incio');
+Route::view('/about', 'about')->name('about');
+Route::view('/contact', 'contact')->name('contact');
+
 Route::middleware('auth')->group(function () {
     Route::view('/dashboard', 'dashboard')->name('dashboard');
 
