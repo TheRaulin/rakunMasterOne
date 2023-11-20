@@ -9,3 +9,4 @@
 
 
 1) Clases y modelos = "PascalCase" - Modelos en singular
+2) Crear todo: php artisan make:model Provider -mrc
