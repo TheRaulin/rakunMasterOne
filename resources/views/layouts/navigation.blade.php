@@ -7,12 +7,12 @@
         <span class="text-sm text-white">Administrador</span>
     </div>
     <div class="flex justify-center items-center flex-col gap-y-0.05/10 flex-grow">
-            <x-option-menu icon="bx bxs-dashboard" :href="route('dashboard')" :active="request()->is('dashboard*')" class="mt-4">
+            {{-- <x-option-menu icon="bx bxs-dashboard" :href="route('dashboard')" :active="request()->is('dashboard*')" class="mt-4">
                 {{ __('Dashboard') }}
             </x-option-menu> 
             <x-option-menu icon="bx bxs-wallet" :href="route('customers.index')" :active="request()->is('csto*')">
                 {{ __('Sales') }}
-            </x-option-menu> 
+            </x-option-menu>  --}}
             <x-option-menu icon="bx bxs-cabinet" :href="route('dashboard')" :active="request()->is('dasoar*')">
                 {{ __('Inventory') }}
             </x-option-menu> 
@@ -25,14 +25,14 @@
 
             <div class="w-full border-b-2 border-white flex-1"></div>
 
-            <x-option-menu icon="bx bxs-message-detail" :href="route('dashboard')" :active="request()->is('dashbard*')">
+            {{-- <x-option-menu icon="bx bxs-message-detail" :href="route('dashboard')" :active="request()->is('dashbard*')">
                 {{ __('support') }}
             </x-option-menu> 
             <x-option-menu icon="bx bxs-cog" :href="route('customers.index')" :active="request()->is('custoer*')">
                 {{ __('Settings') }}
             </x-option-menu> 
 
-            <div class="w-full border-b-2 border-white"></div>
+            <div class="w-full border-b-2 border-white"></div> --}}
 
             <form class="h-0.8/10 w-full flex justify-center items-center" method="POST" action="{{ route('logout') }}">
                 @csrf
