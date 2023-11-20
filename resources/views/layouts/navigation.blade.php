@@ -19,7 +19,7 @@
             <x-option-menu icon="bx bxs-user" :href="route('customers.index')" :active="request()->is('customers*')">
                 {{ __('Customers') }}
             </x-option-menu> 
-            <x-option-menu icon="bx bxs-truck" :href="route('supplier.index')" :active="request()->is('supplier*')">
+            <x-option-menu icon="bx bxs-truck" :href="route('suppliers.index')" :active="request()->is('supplier*')">
                 {{ __('Suppliers') }}
             </x-option-menu> 
 

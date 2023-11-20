@@ -55,7 +55,10 @@ class SupplierController extends Controller
      */
     public function edit(Supplier $supplier)
     {
-        //
+        return view('suppliers.partials.edit-supplier', [
+            'supplier' => $supplier,
+            'suppliers' => Supplier::all()
+        ]);
     }
 
     /**
@@ -63,7 +66,15 @@ class SupplierController extends Controller
      */
     public function update(Request $request, Supplier $supplier)
     {
-        //
+        $validate = $request->validate([
+            'name' => ['required', 'min:3', 'max:255'],
+            'email' => 'required',
+            'telefono' => 'required'
+        ]);
+
+        $supplier->update($validate);
+        
+        return redirect()->route('suppliers.index');
     }
 
     /**
@@ -71,6 +82,7 @@ class SupplierController extends Controller
      */
     public function destroy(Supplier $supplier)
     {
-        //
+        $supplier->delete();
+        return redirect()->route('suppliers.index');
     }
 }

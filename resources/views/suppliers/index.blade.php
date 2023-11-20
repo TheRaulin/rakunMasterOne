@@ -22,10 +22,10 @@
                     <td class="w-1/5 text-center border border-gray-500">{{ $supplier->email }}</td>
                     <td class="w-1/5 text-center border border-gray-500">{{ $supplier->telefono }}</td>
                     <td class="w-1/5 text-center border border-gray-500">
-                        <a class="text-white border-4 rounded-xl border-blue-500 bg-blue-500" href="{{ route('customers.edit', $supplier) }}">Editar</a>
-                        <form class="inline" method="POST" action="{{ route('customers.destroy', $supplier) }}">
+                        <a class="text-white border-4 rounded-xl border-blue-500 bg-blue-500" href="{{ route('suppliers.edit', $supplier) }}">Editar</a>
+                        <form class="inline" method="POST" action="{{ route('suppliers.destroy', $supplier) }}">
                             @csrf @method('DELETE')
-                            <a class="text-white border-4 rounded-xl border-red-500 bg-red-600" href="{{ route('customers.edit', $supplier) }}" 
+                            <a class="text-white border-4 rounded-xl border-red-500 bg-red-600" href="{{ route('suppliers.edit', $supplier) }}" 
                                onclick="event.preventDefault();
                                this.closest('form').submit();" 
                              >Borrar</a>

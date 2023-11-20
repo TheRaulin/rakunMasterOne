@@ -13,7 +13,7 @@
                 <div class="py-4 bg-gray-200">
                     <p class="text-xl font-bold text-black text-center ">Proveedor</p>
                 </div>
-                <form method="POST" action="{{ route('supplier.store') }}" class="w-full p-5 flex flex-col gap-y-6">
+                <form method="POST" action="{{ route('suppliers.store') }}" class="w-full p-5 flex flex-col gap-y-6">
                     @csrf
                     <input name="name" placeholder="Nombre" class="h-18 w-full py-4 px-3 border-2 border-gray-300 rounded-xl " >
                     <input name="email" placeholder="Email" class="h-18 w-full py-4 px-3 border-2 border-gray-300 rounded-xl " >
