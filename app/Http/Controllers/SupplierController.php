@@ -30,7 +30,16 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'name' => ['required', 'min:3', 'max:255'],
+            'email' => 'required',
+            'telefono' => 'required'
+        ]);
+
+
+        Supplier::create($validate);
+    
+        return redirect()->back();
     }
 
     /**
