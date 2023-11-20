@@ -16,16 +16,14 @@ use App\Models\Customer;
 |
 */
 
-Route::view('/', 'welcome')->name('welcome');
-
-//Route::view('/', 'welcome')->name('Incio');
-Route::view('/about', 'about')->name('about');
-Route::view('/contact', 'contact')->name('contact');
+Route::view('/', 'welcome.inicio')->name('inicio');
+Route::view('/about', 'welcome.partials.about')->name('about');
+Route::view('/contact', 'welcome.partials.contact')->name('contact');
 
 Route::middleware('auth')->group(function () {
     Route::view('/dashboard', 'dashboard')->name('dashboard');
 
-    Route::get('/profil', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
@@ -34,6 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/customers/{customer}/edit', [CustomerController::class, 'edit'])->name('customers.edit');
     Route::put('/customers/{customer}', [CustomerController::class, 'update'])->name('customers.update');
     Route::delete('/customers/{customer}', [CustomerController::class, 'destroy'])->name('customers.destroy');
+
+    
 });
 
 
