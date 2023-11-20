@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Provider;
+use App\Models\Supplier;
 use Illuminate\Http\Request;
 
-class ProviderController extends Controller
+class SupplierController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('suppliers.index', [
+            'suppliers' => Supplier::all()
+        ]);
     }
 
     /**
@@ -34,7 +36,7 @@ class ProviderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Provider $provider)
+    public function show(Supplier $supplier)
     {
         //
     }
@@ -42,7 +44,7 @@ class ProviderController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Provider $provider)
+    public function edit(Supplier $supplier)
     {
         //
     }
@@ -50,7 +52,7 @@ class ProviderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Provider $provider)
+    public function update(Request $request, Supplier $supplier)
     {
         //
     }
@@ -58,7 +60,7 @@ class ProviderController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Provider $provider)
+    public function destroy(Supplier $supplier)
     {
         //
     }
