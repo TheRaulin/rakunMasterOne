@@ -6,7 +6,13 @@
 
 
 @layer components{
+    
     .wrapper{
         @apply w-[90%] mx-auto overflow-hidden max-w-screen-xl;
     }
+
+    .button-login {
+        @apply bg-violet-900 text-violet-300 block 
+        w-max py-4 px-12 rounded-full ;
+     }
 }

@@ -8,6 +8,7 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        
          ],
 
     theme: {
@@ -47,6 +48,13 @@ export default {
                     50:'#AEBAC1'
                 }
             },
+
+            backgroundImage: {
+                "close-menu": "url('../images/icon-close.svg')",
+                "open-menu": "url('../images/icon-hamburger.svg')"
+               },
+
+              
         },
     },
 
